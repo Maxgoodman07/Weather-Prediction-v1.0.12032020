@@ -1,0 +1,212 @@
+print("WELCOME TO WEATHER PREDICTION v1.0.12032020...")
+print("LOADING...")
+
+import sys
+import time
+import webbrowser
+
+def sub(x, y):
+    return x - y
+def add(x, y):
+    return x + y
+
+print("")
+print("")
+webopen = input("Do you want to Open your Ambient Weather Dashboard? (Y/N): ")
+
+if webopen == 'Y' or webopen == 'y' or webopen == 'Y.' or webopen == 'y.':
+    print("LOADING AMBIENT WEATHER DASHBOARD...")
+    webbrowser.open('https://ambientweather.net/dashboard/8add17102ed680d0c84b756c9ea173dc', new = 2, autoraise = True)
+    time.sleep(1)
+else:
+    pass
+
+
+print("")
+print("")
+print("Please choose one of the options below:")
+time.sleep(1)
+print("1.) Weather prediction.")
+print("2.) View radar.")
+print("3.) Check current bulletins.")
+
+choice1 = input("Enter the number that represents your choice of what you would like to perform: ")
+
+if choice1 == '1' or choice1 == '1.':
+    print("LOADING WEATHER PREDICTION... ")
+
+    temp1 = float(input("Temperature (in degrees Fahrenheit): "))
+    wind1 = float(input("Current wind speed (in Miles Per Hour): "))
+    raev1 = float(input("Rain even amount (in inches): "))
+    pressure1 = float(input("Relative pressure (in Inches of Mercury): "))
+    humid1 = float(input("Current humidity (in %): "))
+    uvi1 = int(input("Current UV Index: "))
+    radar1 = input("Incoming precipitation within 75 miles? (Y/N): ")
+    timeh = time.localtime()
+    month2 = time.strftime("%m", timeh) 
+    time2 = time.strftime("%H:%M:%S", timeh)
+
+    print("")
+    print("")
+
+    #insert weather predict first
+    if (month2 == '12') or (month2 == '1') or (month2 == '2'):
+        if(time2 < '09:00:00'):
+            ht129 = add(temp1, 13)
+            ht1292 = round(ht129, ndigits = 1)
+            lt129 = sub(temp1, 8)
+            lt1292 = round(lt129, ndigits = 1)
+            t129 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t129 % (ht1292, lt1292))
+            time.sleep(1)
+
+        elif(time2 >= '19:30:00'):
+            ht1219 = add(temp1, 5)
+            ht12192 = round(ht1219, ndigits = 1)
+            lt1219 = sub(temp1, 18)
+            lt12192 = round(lt1219, ndigits = 1)
+            t1219 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t1219 % (ht12192, lt12192))
+            time.sleep(1)
+
+        elif(time2 >= '09:00:00'):
+            ht = add(temp1, 8)
+            ht12902 = round(ht, ndigits = 1)
+            lt = sub(temp1, 4)
+            lt12902 = round(lt, ndigits = 1)
+            t1290 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t1290 % (ht12902, lt12902))
+            time.sleep(1)
+        else:
+            print("ERROR 404: NOT FOUND")
+            print("THE REQUESTED RESOURCE WAS NOT FOUND.")
+            print("SECTION 51-80")
+            sys.exit()                                                                 
+
+    elif (month2 == '3') or (month2 == '4') or (month2 == '5'):
+        if(time2 < '09:00:00'):
+            ht39 = add(temp1, 16)
+            ht392 = round(ht39, ndigits = 1)
+            lt39 = sub(temp1, 5)
+            lt392 = round(lt39, ndigits = 1)
+            t39 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t39 % (ht392, lt392))
+            time.sleep(1)
+            
+        elif(time2 >= '19:30:00'):
+            ht319 = add(temp1, 6)
+            ht3192 = round(ht319, ndigits = 1)
+            lt319 = sub(temp1, 13)
+            lt3192 = round(lt319, ndigits = 1)
+            t319 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t319 % (ht3192, lt3192))
+            time.sleep(1)
+
+        elif(time2 >= '09:00:00'):
+            ht309 = add(temp1, 7)
+            ht3092 = round(ht309, ndigits = 1)
+            lt309 = sub(temp1, 3)
+            lt3092 = round(lt309, ndigits = 1)
+            t309 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t309 % (ht3092, lt3092))
+            time.sleep(1)
+        else:
+            print("ERROR 404: NOT FOUND")
+            print("THE REQUESTED RESOURCE WAS NOT FOUND.")
+            print("SECTION 84-112")
+            sys.exit()
+            
+    elif (month2 == '6') or (month2 == '7') or (month2 == '8'):
+        if(time2 < '09:00:00'):
+            ht69 = add(temp1, 25)
+            ht692 = round(ht69, ndigits = 1)
+            lt69 = sub(temp1, 5)
+            lt692 = round(lt69, ndigits = 1)
+            t69 = 'High temperature: %s *F.   Low temperature: %s *F.'
+            print(t69 % (ht692, lt692))
+            time.sleep(1)
+
+        elif(time2 >= '19:30:00'):
+            ht619 = add(temp1, 7)
+            ht6192 = round(ht619, ndigits = 1)
+            lt619 = sub(temp1, 15)
+            lt6192 = round(lt619, ndigits = 1)
+            t619 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t619 % (ht6192, lt6192))
+            time.sleep(1)
+
+        elif(time2 >= '09:00:00'):
+            ht609 = add(temp1, 9)
+            ht6092 = round(ht609, ndigits = 1)
+            lt609 = sub(temp1, 4)
+            lt6092 = round(lt609, ndigits = 1)
+            t609 = 'High temperature: %s *F.   Low temperature: %s *F.'
+            print(t609 % (ht6092, lt6092))
+            time.sleep(1)
+            
+        else:
+            print("ERROR 404: NOT FOUND")
+            print("THE REQUESTED RESOURCE WAS NOT FOUND.")
+            print("SECTION (null)-(null)")
+            sys.exit()
+            
+    elif (month2 == '9') or (month2 == '10') or (month2 == '11'):
+        if(time2 < '09:00:00'):
+            ht99 = add(temp1, 11)
+            ht992 = round(ht99, ndigits = 1)
+            lt99 = sub(temp1, 5)
+            lt992 = round(lt99, ndigits = 1)
+            t99 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t99 % (ht992, lt992))
+            time.sleep(1)
+
+        elif(time2 >= '19:30:00'):
+            ht919 = add(temp1, 6)
+            ht9192 = round(ht919, ndigits = 1)
+            lt919 = sub(temp1, 17)
+            lt9192 = round(lt919, ndigits = 1)
+            t919 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t919 % (ht9192, lt9192))
+            time.sleep(1)
+
+        elif(time2 >= '09:00:00'):#5, 4
+            ht909 = add(temp1, 5)
+            ht9092 = round(ht909, ndigits = 1)
+            lt909 = sub(temp1, 4)
+            lt9092 = round(lt909, ndigits = 1)
+            t909 = 'High temperature: %s *F.   Low temperature: %s *F'
+            print(t909 % (ht9092, lt9092))
+            time.sleep(1)
+
+        else:
+            print("ERROR 404: NOT FOUND")
+            print("THE REQUESTED RESOURCE WAS NOT FOUND.")
+            print("SECTION (null)-(null)")
+            sys.exit()
+    else:
+        print("ERROR 404: NOT FOUND")
+        print("THE REQUESTED RESOURCE WAS NOT FOUND.")
+        print("SECTION 51-(null)")
+        sys.exit()
+
+elif choice1 == '2' or choice1 == '2.':
+    print("ERROR 410: GONE")
+    print("THE REQUESTED RESOURCE IS NO LONGER AVAILABLE AND HAS BEEN PERMANENTLY REMOVED.")
+    sys.exit()
+
+elif choice1 == '3' or choice1 == '3.':
+    print("ERROR 410: GONE")
+    print("THE REQUESTED RESOURCE IS NO LONGER AVAILABLE AND HAS BEEN PERMANENTLY REMOVED.")
+    sys.exit()
+
+else:
+    print("ERROR 400: BAD REQUEST")
+    print("THE REQUEST WAS INCORRECTLY DONE.")
+    sys.exit()
+
+
+
+    
+
+    
+
